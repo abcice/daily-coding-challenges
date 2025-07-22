@@ -36,8 +36,11 @@ addOne(-5) //=> -4
 -----------------------------------------------------------------------------*/
 // Your solution for 01-addOne here:
 
-
-
+const addOne = (num) => {
+  return num + 1
+}
+addOne(1)
+addOne(-5)
 
 
 /*-----------------------------------------------------------------------------
@@ -59,9 +62,15 @@ addTwoNumbers(0, 0) //=> 0
 addTwoNumbers('Hello', 5) //=> NaN
 -----------------------------------------------------------------------------*/
 // Your solution for 02-addTwoNumbers here:
+const addTwoNumbers = (a,b) => {
+  if (typeof a !== 'number' || typeof b !== 'number') return NaN;
+  return a + b;
 
-
-
+}
+addTwoNumbers(5, 10)
+addTwoNumbers(10, -2)
+addTwoNumbers(0, 0)
+addTwoNumbers('Hello', 5)
 
 
 /*-----------------------------------------------------------------------------
@@ -84,7 +93,13 @@ sumNumbers([]) //=> 0
 -----------------------------------------------------------------------------*/
 // Your solution for 03-sumNumbers here:
 
-
+const sumNumbers = (arr) => {
+  let sum = 0
+  for(let i = 0; i < arr.length; i++) {
+    sum = sum + arr[i]
+  }
+  return sum
+}
 
 
 
@@ -107,7 +122,13 @@ addList(1,50,1.23) //=> 52.23
 addList(7,-12) //=> -5
 -----------------------------------------------------------------------------*/
 // Your solution for 04-addList here:
-
+const addList = (...nums) => {
+  let sum = 0;
+  for (let i = 0 , i; nums.length; i++) {
+    sum += nums[i];
+  }
+  return sum;
+}
 
 
 
