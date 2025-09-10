@@ -122,14 +122,13 @@ addList(1,50,1.23) //=> 52.23
 addList(7,-12) //=> -5
 -----------------------------------------------------------------------------*/
 // Your solution for 04-addList here:
-const addList = (...nums) => {
+function addList(...nums) {
   let sum = 0;
-  for (let i = 0 , i; nums.length; i++) {
+  for (let i = 0; i < nums.length; i++) {
     sum += nums[i];
   }
   return sum;
 }
-
 
 
 
@@ -156,6 +155,12 @@ computeRemainder(10.5, 3) //=> 1.5
 -----------------------------------------------------------------------------*/
 // Your solution for 05-computeRemainder here:
 
+const computeRemainder = (a,b) => {
+  if (b === 0) {
+    return Infinity
+  }
+  return a % b
+}
 
 
 
